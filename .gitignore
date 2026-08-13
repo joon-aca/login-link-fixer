@@ -7,5 +7,7 @@ DerivedData/
 .wrangler/
 dist/
 node_modules/
+tmp/
+Resources/AppIcon.iconset/
 *.xcuserstate
 xcuserdata/

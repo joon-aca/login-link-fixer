@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15D745911093F7198CD8346E /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A510D4F883DC2FD9BEDA582 /* AboutWindowController.swift */; };
 		2D072A6A57CB6797D457F547 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDBBAF019A5CE4B14032B8 /* StatusItemController.swift */; };
 		49F2175B94E22B6871D97BC4 /* LoginLinkFixerCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */; };
+		4C215052CC81CA1024B2909A /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1CA4D85E236DCA3BA35B27AD /* AppIcon.icns */; };
 		4C26E834C5B1097A6F6787E8 /* LoginLinkFixerCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7324E53CDA9542468AE57CB8 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CEACE6935A77C148052CA6 /* AppMain.swift */; };
 		C82C11F4046701F9B0059118 /* QuickFixWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA890F3EE12090D6C7241429 /* QuickFixWindowController.swift */; };
@@ -63,10 +65,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1CA4D85E236DCA3BA35B27AD /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoginLinkFixerCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29CEACE6935A77C148052CA6 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		34E4543096DB4037D5D9E57D /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
 		80CDBBAF019A5CE4B14032B8 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		8A510D4F883DC2FD9BEDA582 /* AboutWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
 		AB74DB4142541BD18CE80365 /* Login Link Fixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login Link Fixer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6338048D2F6195BD9B8A824 /* LinkFixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkFixer.swift; sourceTree = "<group>"; };
 		C67766383E1EF444734FB121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,12 +127,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E680DB8B24D80CAAA4D92DC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1CA4D85E236DCA3BA35B27AD /* AppIcon.icns */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E9A37317624BC9A380E06F88 = {
 			isa = PBXGroup;
 			children = (
 				FF33AB1EA8BDEC864440DC1B /* LoginLinkFixer */,
 				7DD0880A5F7D7FFDE0839A09 /* LoginLinkFixerCore */,
 				AEFE85300F12E6CABA457C46 /* LoginLinkFixerTests */,
+				E680DB8B24D80CAAA4D92DC9 /* Resources */,
 				E3C0877631EA97E2D4885C20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,6 +149,7 @@
 		FF33AB1EA8BDEC864440DC1B /* LoginLinkFixer */ = {
 			isa = PBXGroup;
 			children = (
+				8A510D4F883DC2FD9BEDA582 /* AboutWindowController.swift */,
 				C67766383E1EF444734FB121 /* AppDelegate.swift */,
 				29CEACE6935A77C148052CA6 /* AppMain.swift */,
 				34E4543096DB4037D5D9E57D /* HotkeyManager.swift */,
@@ -191,6 +205,7 @@
 			buildConfigurationList = 6BD33B21E1698D69F32A2D1A /* Build configuration list for PBXNativeTarget "LoginLinkFixer" */;
 			buildPhases = (
 				A39B2E55CBC7035962F941FD /* Sources */,
+				3466F43557A4F40AF308866F /* Resources */,
 				4AC212FA725490DCA33D6A37 /* Frameworks */,
 				14743CE4222C0150B34123A9 /* Embed Frameworks */,
 			);
@@ -238,6 +253,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		3466F43557A4F40AF308866F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C215052CC81CA1024B2909A /* AppIcon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7BF866D837C44CFEC9AEA23A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -259,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D745911093F7198CD8346E /* AboutWindowController.swift in Sources */,
 				F9C74FA340CE1982B4D1B77D /* AppDelegate.swift in Sources */,
 				7324E53CDA9542468AE57CB8 /* AppMain.swift in Sources */,
 				EF6F423E3397EFF5F1497DB2 /* HotkeyManager.swift in Sources */,

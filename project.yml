@@ -26,8 +26,14 @@ targets:
     productName: "Login Link Fixer"
     info:
       path: Config/Info.plist
+      properties:
+        CFBundleIconFile: AppIcon
+        LSUIElement: true
+        NSHumanReadableCopyright: "Copyright © 2026 Joon Lee"
     sources:
       - path: Sources/LoginLinkFixer
+      - path: Resources/AppIcon.icns
+        buildPhase: resources
     dependencies:
       - target: LoginLinkFixerCore
     settings:

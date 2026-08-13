@@ -1,5 +1,7 @@
 # Login Link Fixer
 
+<img src="Resources/AppIcon.png" alt="Login Link Fixer icon" width="160">
+
 A tiny native macOS menu-bar utility for fixing login URLs mangled by line breaks or Markdown.
 
 ## Use
@@ -9,6 +11,8 @@ A tiny native macOS menu-bar utility for fixing login URLs mangled by line break
 3. Press Return to fix and open it.
 
 You can also paste, type, or drag text into the popup. Everything happens locally; the app has no backend, analytics, or storage.
+
+Right-click the menu-bar icon for clipboard actions, the About screen, and Quit.
 
 ## Build and install
 

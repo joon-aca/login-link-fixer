@@ -4,6 +4,7 @@ import LoginLinkFixerCore
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
     private var panelController: QuickFixWindowController?
+    private var aboutController: AboutWindowController?
     private var statusItemController: StatusItemController?
     private var hotkeyManager: HotkeyManager?
 
@@ -14,9 +15,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         self.panelController = panelController
+        let aboutController = AboutWindowController()
+        self.aboutController = aboutController
         statusItemController = StatusItemController(
             showFixer: { [weak self] in self?.panelController?.present() },
             fixClipboard: { [weak self] in self?.fixClipboardAndOpen() },
+            showAbout: { [weak self] in self?.aboutController?.present() },
             quit: { NSApp.terminate(nil) }
         )
         hotkeyManager = HotkeyManager { [weak self] in

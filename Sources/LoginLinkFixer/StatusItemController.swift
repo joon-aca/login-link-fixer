@@ -5,11 +5,18 @@ final class StatusItemController: NSObject {
     private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     private let showFixer: () -> Void
     private let fixClipboard: () -> Void
+    private let showAbout: () -> Void
     private let quit: () -> Void
 
-    init(showFixer: @escaping () -> Void, fixClipboard: @escaping () -> Void, quit: @escaping () -> Void) {
+    init(
+        showFixer: @escaping () -> Void,
+        fixClipboard: @escaping () -> Void,
+        showAbout: @escaping () -> Void,
+        quit: @escaping () -> Void
+    ) {
         self.showFixer = showFixer
         self.fixClipboard = fixClipboard
+        self.showAbout = showAbout
         self.quit = quit
         super.init()
 
@@ -28,6 +35,8 @@ final class StatusItemController: NSObject {
             menu.addItem(withTitle: "Show Link Fixer", action: #selector(show), keyEquivalent: "")
             menu.addItem(withTitle: "Fix Clipboard & Open", action: #selector(fix), keyEquivalent: "")
             menu.addItem(.separator())
+            menu.addItem(withTitle: "About Login Link Fixer", action: #selector(about), keyEquivalent: "")
+            menu.addItem(.separator())
             menu.addItem(withTitle: "Quit Login Link Fixer", action: #selector(quitApp), keyEquivalent: "q")
             menu.items.forEach { $0.target = self }
             statusItem.menu = menu
@@ -40,5 +49,6 @@ final class StatusItemController: NSObject {
 
     @objc private func show() { showFixer() }
     @objc private func fix() { fixClipboard() }
+    @objc private func about() { showAbout() }
     @objc private func quitApp() { quit() }
 }
