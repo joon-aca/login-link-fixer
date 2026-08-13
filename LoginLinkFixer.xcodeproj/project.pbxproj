@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D072A6A57CB6797D457F547 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDBBAF019A5CE4B14032B8 /* StatusItemController.swift */; };
+		49F2175B94E22B6871D97BC4 /* LoginLinkFixerCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */; };
+		4C26E834C5B1097A6F6787E8 /* LoginLinkFixerCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7324E53CDA9542468AE57CB8 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CEACE6935A77C148052CA6 /* AppMain.swift */; };
+		C82C11F4046701F9B0059118 /* QuickFixWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA890F3EE12090D6C7241429 /* QuickFixWindowController.swift */; };
+		D1D8D5691630575C19F04E0F /* LinkFixerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69FE4299E4D5DF743DAAC95 /* LinkFixerTests.swift */; };
+		E641566B8AAAF8271A517FBE /* LoginLinkFixerCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */; };
+		ECFB2729041FFE7E8ED32897 /* LoginLinkFixerCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDD7F8B40C6241C275EB60C0 /* LinkFixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6338048D2F6195BD9B8A824 /* LinkFixer.swift */; };
+		EF6F423E3397EFF5F1497DB2 /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E4543096DB4037D5D9E57D /* HotkeyManager.swift */; };
+		F9C74FA340CE1982B4D1B77D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67766383E1EF444734FB121 /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B3D8D797B0B6591D0133855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F10F32B97BCF0CEE4328356 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B78200F0C10507DF37A2DBD;
+			remoteInfo = LoginLinkFixerCore;
+		};
+		4F474971974CA7320838DD1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F10F32B97BCF0CEE4328356 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B78200F0C10507DF37A2DBD;
+			remoteInfo = LoginLinkFixerCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14743CE4222C0150B34123A9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ECFB2729041FFE7E8ED32897 /* LoginLinkFixerCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A66F879299DBA7270CB6E37C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C26E834C5B1097A6F6787E8 /* LoginLinkFixerCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoginLinkFixerCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CEACE6935A77C148052CA6 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
+		34E4543096DB4037D5D9E57D /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
+		80CDBBAF019A5CE4B14032B8 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		AB74DB4142541BD18CE80365 /* Login Link Fixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login Link Fixer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6338048D2F6195BD9B8A824 /* LinkFixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkFixer.swift; sourceTree = "<group>"; };
+		C67766383E1EF444734FB121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA890F3EE12090D6C7241429 /* QuickFixWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFixWindowController.swift; sourceTree = "<group>"; };
+		F69FE4299E4D5DF743DAAC95 /* LinkFixerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkFixerTests.swift; sourceTree = "<group>"; };
+		FDF32716F64095A8BC1483C3 /* LoginLinkFixerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginLinkFixerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AC212FA725490DCA33D6A37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F2175B94E22B6871D97BC4 /* LoginLinkFixerCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4B5432D5B5B9D4EF59D6BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E641566B8AAAF8271A517FBE /* LoginLinkFixerCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DD0880A5F7D7FFDE0839A09 /* LoginLinkFixerCore */ = {
+			isa = PBXGroup;
+			children = (
+				C6338048D2F6195BD9B8A824 /* LinkFixer.swift */,
+			);
+			name = LoginLinkFixerCore;
+			path = Sources/LoginLinkFixerCore;
+			sourceTree = "<group>";
+		};
+		AEFE85300F12E6CABA457C46 /* LoginLinkFixerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F69FE4299E4D5DF743DAAC95 /* LinkFixerTests.swift */,
+			);
+			name = LoginLinkFixerTests;
+			path = Tests/LoginLinkFixerTests;
+			sourceTree = "<group>";
+		};
+		E3C0877631EA97E2D4885C20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB74DB4142541BD18CE80365 /* Login Link Fixer.app */,
+				23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */,
+				FDF32716F64095A8BC1483C3 /* LoginLinkFixerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9A37317624BC9A380E06F88 = {
+			isa = PBXGroup;
+			children = (
+				FF33AB1EA8BDEC864440DC1B /* LoginLinkFixer */,
+				7DD0880A5F7D7FFDE0839A09 /* LoginLinkFixerCore */,
+				AEFE85300F12E6CABA457C46 /* LoginLinkFixerTests */,
+				E3C0877631EA97E2D4885C20 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF33AB1EA8BDEC864440DC1B /* LoginLinkFixer */ = {
+			isa = PBXGroup;
+			children = (
+				C67766383E1EF444734FB121 /* AppDelegate.swift */,
+				29CEACE6935A77C148052CA6 /* AppMain.swift */,
+				34E4543096DB4037D5D9E57D /* HotkeyManager.swift */,
+				DA890F3EE12090D6C7241429 /* QuickFixWindowController.swift */,
+				80CDBBAF019A5CE4B14032B8 /* StatusItemController.swift */,
+			);
+			name = LoginLinkFixer;
+			path = Sources/LoginLinkFixer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9733E37E666FB642F18C4C02 /* LoginLinkFixerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E58161465A4669CD636E0A /* Build configuration list for PBXNativeTarget "LoginLinkFixerTests" */;
+			buildPhases = (
+				7BF866D837C44CFEC9AEA23A /* Sources */,
+				E4B5432D5B5B9D4EF59D6BAF /* Frameworks */,
+				A66F879299DBA7270CB6E37C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3718CE22CB2C3DCF296B6B38 /* PBXTargetDependency */,
+			);
+			name = LoginLinkFixerTests;
+			packageProductDependencies = (
+			);
+			productName = LoginLinkFixerTests;
+			productReference = FDF32716F64095A8BC1483C3 /* LoginLinkFixerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9B78200F0C10507DF37A2DBD /* LoginLinkFixerCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BABD7AA1643F3902E59F65E2 /* Build configuration list for PBXNativeTarget "LoginLinkFixerCore" */;
+			buildPhases = (
+				9A22D37177BB025430374922 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoginLinkFixerCore;
+			packageProductDependencies = (
+			);
+			productName = LoginLinkFixerCore;
+			productReference = 23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C3E4AAEFA8BAD9317E0A83C4 /* LoginLinkFixer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BD33B21E1698D69F32A2D1A /* Build configuration list for PBXNativeTarget "LoginLinkFixer" */;
+			buildPhases = (
+				A39B2E55CBC7035962F941FD /* Sources */,
+				4AC212FA725490DCA33D6A37 /* Frameworks */,
+				14743CE4222C0150B34123A9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				105F43BC4170CDF85B33BA08 /* PBXTargetDependency */,
+			);
+			name = LoginLinkFixer;
+			packageProductDependencies = (
+			);
+			productName = LoginLinkFixer;
+			productReference = AB74DB4142541BD18CE80365 /* Login Link Fixer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F10F32B97BCF0CEE4328356 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 16EB7D338CC7A305A966E67B /* Build configuration list for PBXProject "LoginLinkFixer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E9A37317624BC9A380E06F88;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E3C0877631EA97E2D4885C20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3E4AAEFA8BAD9317E0A83C4 /* LoginLinkFixer */,
+				9B78200F0C10507DF37A2DBD /* LoginLinkFixerCore */,
+				9733E37E666FB642F18C4C02 /* LoginLinkFixerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BF866D837C44CFEC9AEA23A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1D8D5691630575C19F04E0F /* LinkFixerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A22D37177BB025430374922 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD7F8B40C6241C275EB60C0 /* LinkFixer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39B2E55CBC7035962F941FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C74FA340CE1982B4D1B77D /* AppDelegate.swift in Sources */,
+				7324E53CDA9542468AE57CB8 /* AppMain.swift in Sources */,
+				EF6F423E3397EFF5F1497DB2 /* HotkeyManager.swift in Sources */,
+				C82C11F4046701F9B0059118 /* QuickFixWindowController.swift in Sources */,
+				2D072A6A57CB6797D457F547 /* StatusItemController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		105F43BC4170CDF85B33BA08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B78200F0C10507DF37A2DBD /* LoginLinkFixerCore */;
+			targetProxy = 4F474971974CA7320838DD1C /* PBXContainerItemProxy */;
+		};
+		3718CE22CB2C3DCF296B6B38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B78200F0C10507DF37A2DBD /* LoginLinkFixerCore */;
+			targetProxy = 3B3D8D797B0B6591D0133855 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5E8188A48A0B40CB3E9879A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Config/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joon.loginlinkfixer;
+				PRODUCT_NAME = "Login Link Fixer";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		89C20B15B00AF2FB20FB36AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joon.loginlinkfixer.core;
+				PRODUCT_NAME = LoginLinkFixerCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		9B95FDD26789D88951338F54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A33CF906A5C1A87832766BF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joon.loginlinkfixer.tests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B3E144A71DA3CBF4D7B1FA0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		C24F3312B82DD68506D3DD7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joon.loginlinkfixer.tests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C6A36A4D15E1B047DF713482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Config/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joon.loginlinkfixer;
+				PRODUCT_NAME = "Login Link Fixer";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F20E8831E0BF3AA3EC24C85F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joon.loginlinkfixer.core;
+				PRODUCT_NAME = LoginLinkFixerCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16EB7D338CC7A305A966E67B /* Build configuration list for PBXProject "LoginLinkFixer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3E144A71DA3CBF4D7B1FA0A /* Debug */,
+				9B95FDD26789D88951338F54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		52E58161465A4669CD636E0A /* Build configuration list for PBXNativeTarget "LoginLinkFixerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33CF906A5C1A87832766BF8 /* Debug */,
+				C24F3312B82DD68506D3DD7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6BD33B21E1698D69F32A2D1A /* Build configuration list for PBXNativeTarget "LoginLinkFixer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E8188A48A0B40CB3E9879A3 /* Debug */,
+				C6A36A4D15E1B047DF713482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BABD7AA1643F3902E59F65E2 /* Build configuration list for PBXNativeTarget "LoginLinkFixerCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89C20B15B00AF2FB20FB36AA /* Debug */,
+				F20E8831E0BF3AA3EC24C85F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F10F32B97BCF0CEE4328356 /* Project object */;
+}

@@ -1,0 +1,60 @@
+name: LoginLinkFixer
+options:
+  bundleIdPrefix: com.joon
+  deploymentTarget:
+    macOS: "14.0"
+settings:
+  base:
+    SWIFT_VERSION: 6.0
+    ENABLE_HARDENED_RUNTIME: YES
+targets:
+  LoginLinkFixerCore:
+    type: framework
+    platform: macOS
+    sources:
+      - path: Sources/LoginLinkFixerCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.joon.loginlinkfixer.core
+        PRODUCT_NAME: LoginLinkFixerCore
+        DEFINES_MODULE: YES
+        GENERATE_INFOPLIST_FILE: YES
+
+  LoginLinkFixer:
+    type: application
+    platform: macOS
+    productName: "Login Link Fixer"
+    info:
+      path: Config/Info.plist
+    sources:
+      - path: Sources/LoginLinkFixer
+    dependencies:
+      - target: LoginLinkFixerCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.joon.loginlinkfixer
+        PRODUCT_NAME: "Login Link Fixer"
+        INFOPLIST_FILE: Config/Info.plist
+
+  LoginLinkFixerTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests/LoginLinkFixerTests
+    dependencies:
+      - target: LoginLinkFixerCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.joon.loginlinkfixer.tests
+        GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGNING_REQUIRED: NO
+
+schemes:
+  LoginLinkFixer:
+    build:
+      targets:
+        LoginLinkFixer: all
+    test:
+      targets:
+        - LoginLinkFixerTests
