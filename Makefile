@@ -1,4 +1,4 @@
-.PHONY: project build test install
+.PHONY: project build test install release
 
 project:
 	@command -v xcodegen >/dev/null 2>&1 || { echo "xcodegen is required."; exit 1; }
@@ -12,3 +12,6 @@ test: project
 
 install: project
 	./scripts/install.sh
+
+release: project
+	./scripts/release.sh
