@@ -13,6 +13,7 @@
 		4C215052CC81CA1024B2909A /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1CA4D85E236DCA3BA35B27AD /* AppIcon.icns */; };
 		4C26E834C5B1097A6F6787E8 /* LoginLinkFixerCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7324E53CDA9542468AE57CB8 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CEACE6935A77C148052CA6 /* AppMain.swift */; };
+		791A75A0B0ADE313FD1EE2E2 /* LaunchAtLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CF18B12760DA9877A5F8A1 /* LaunchAtLoginController.swift */; };
 		C82C11F4046701F9B0059118 /* QuickFixWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA890F3EE12090D6C7241429 /* QuickFixWindowController.swift */; };
 		D1D8D5691630575C19F04E0F /* LinkFixerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69FE4299E4D5DF743DAAC95 /* LinkFixerTests.swift */; };
 		E641566B8AAAF8271A517FBE /* LoginLinkFixerCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A58E5ACF6BEF752E62E4C6 /* LoginLinkFixerCore.framework */; };
@@ -74,6 +75,7 @@
 		AB74DB4142541BD18CE80365 /* Login Link Fixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login Link Fixer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6338048D2F6195BD9B8A824 /* LinkFixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkFixer.swift; sourceTree = "<group>"; };
 		C67766383E1EF444734FB121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0CF18B12760DA9877A5F8A1 /* LaunchAtLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginController.swift; sourceTree = "<group>"; };
 		DA890F3EE12090D6C7241429 /* QuickFixWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFixWindowController.swift; sourceTree = "<group>"; };
 		F69FE4299E4D5DF743DAAC95 /* LinkFixerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkFixerTests.swift; sourceTree = "<group>"; };
 		FDF32716F64095A8BC1483C3 /* LoginLinkFixerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginLinkFixerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 				C67766383E1EF444734FB121 /* AppDelegate.swift */,
 				29CEACE6935A77C148052CA6 /* AppMain.swift */,
 				34E4543096DB4037D5D9E57D /* HotkeyManager.swift */,
+				D0CF18B12760DA9877A5F8A1 /* LaunchAtLoginController.swift */,
 				DA890F3EE12090D6C7241429 /* QuickFixWindowController.swift */,
 				80CDBBAF019A5CE4B14032B8 /* StatusItemController.swift */,
 			);
@@ -289,6 +292,7 @@
 				F9C74FA340CE1982B4D1B77D /* AppDelegate.swift in Sources */,
 				7324E53CDA9542468AE57CB8 /* AppMain.swift in Sources */,
 				EF6F423E3397EFF5F1497DB2 /* HotkeyManager.swift in Sources */,
+				791A75A0B0ADE313FD1EE2E2 /* LaunchAtLoginController.swift in Sources */,
 				C82C11F4046701F9B0059118 /* QuickFixWindowController.swift in Sources */,
 				2D072A6A57CB6797D457F547 /* StatusItemController.swift in Sources */,
 			);

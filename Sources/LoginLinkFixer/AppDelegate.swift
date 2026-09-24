@@ -7,6 +7,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var aboutController: AboutWindowController?
     private var statusItemController: StatusItemController?
     private var hotkeyManager: HotkeyManager?
+    private let launchAtLoginController = LaunchAtLoginController()
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         let panelController = QuickFixWindowController()
@@ -20,6 +21,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         statusItemController = StatusItemController(
             showFixer: { [weak self] in self?.panelController?.present() },
             fixClipboard: { [weak self] in self?.fixClipboardAndOpen() },
+            launchAtLoginState: { [weak self] in self?.launchAtLoginController.state ?? .disabled },
+            toggleLaunchAtLogin: { [weak self] in self?.toggleLaunchAtLogin() },
             showAbout: { [weak self] in self?.aboutController?.present() },
             quit: { NSApp.terminate(nil) }
         )
@@ -28,7 +31,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         hotkeyManager?.register()
 
-        panelController.present()
+        if !LaunchAtLoginController.wasLaunchedAsLoginItem {
+            panelController.present()
+        }
+    }
+
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        if !flag {
+            panelController?.present()
+        }
+        return true
     }
 
     private func fixClipboardAndOpen() {
@@ -41,6 +53,24 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             NSWorkspace.shared.open(try LinkFixer.clean(text))
         } catch {
             panelController?.present(text: text, error: error.localizedDescription)
+        }
+    }
+
+    private func toggleLaunchAtLogin() {
+        do {
+            try launchAtLoginController.toggle()
+        } catch {
+            let alert = NSAlert()
+            alert.alertStyle = .warning
+            alert.messageText = "Couldn’t Update Login Item"
+            alert.informativeText = error.localizedDescription
+            alert.addButton(withTitle: "Open Login Item Settings")
+            alert.addButton(withTitle: "Cancel")
+
+            NSApp.activate(ignoringOtherApps: true)
+            if alert.runModal() == .alertFirstButtonReturn {
+                launchAtLoginController.openSystemSettings()
+            }
         }
     }
 }
