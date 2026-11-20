@@ -18,6 +18,12 @@ final class LinkFixerTests: XCTestCase {
         XCTAssertEqual(try LinkFixer.clean(markdown).absoluteString, url)
     }
 
+    func testUnescapesQuerySeparatorInMarkdownTarget() throws {
+        let url = "http://127.0.0.1:4273/app/?pack=philidor-old-indian&moves=e4+e5"
+        let markdown = #"[\#(url)](http://127.0.0.1:4273/app/?pack=philidor-old-indian\&moves=e4+e5)"# + "\u{00A0}"
+        XCTAssertEqual(try LinkFixer.clean(markdown).absoluteString, url)
+    }
+
     func testDecodesEscapedAmpersands() throws {
         XCTAssertEqual(
             try LinkFixer.clean("https://example.com/?a=1&amp;b=2").absoluteString,
