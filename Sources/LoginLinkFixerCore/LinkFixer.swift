@@ -23,7 +23,8 @@ public enum LinkFixer {
             .replacingOccurrences(of: "&amp;", with: "&")
             .replacingOccurrences(of: "&#38;", with: "&")
 
-        var candidate = markdownTarget(in: decoded) ?? decoded
+        let target = markdownTarget(in: decoded)?.replacingOccurrences(of: #"\&"#, with: "&")
+        var candidate = target ?? decoded
         guard let schemeRange = candidate.range(
             of: #"https?://"#,
             options: [.regularExpression, .caseInsensitive]
@@ -33,7 +34,7 @@ public enum LinkFixer {
 
         candidate = String(candidate[schemeRange.lowerBound...])
 
-        if markdownTarget(in: decoded) == nil,
+        if target == nil,
            let stop = candidate.firstIndex(where: { "<>\"'`".contains($0) }) {
             candidate = String(candidate[..<stop])
         }
