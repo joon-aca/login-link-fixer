@@ -78,7 +78,7 @@ final class QuickFixWindowController: NSWindowController, NSTextFieldDelegate {
         icon.contentTintColor = .tertiaryLabelColor
 
         inputField.translatesAutoresizingMaskIntoConstraints = false
-        inputField.placeholderString = "Paste or drop the broken Claude login link…"
+        inputField.placeholderString = "Paste or drop a broken login link…"
         inputField.setAccessibilityLabel("Broken login link")
         inputField.font = .systemFont(ofSize: 20, weight: .light)
         inputField.isBordered = false
