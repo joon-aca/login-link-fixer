@@ -29,7 +29,7 @@ targets:
       properties:
         CFBundleIconFile: AppIcon
         CFBundleShortVersionString: "1.2.1"
-        CFBundleVersion: "5"
+        CFBundleVersion: "6"
         LSUIElement: true
         NSHumanReadableCopyright: "Copyright © 2026 Joon Lee"
     sources:
