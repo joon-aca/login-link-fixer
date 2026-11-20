@@ -34,15 +34,17 @@ public enum LinkFixer {
 
         candidate = String(candidate[schemeRange.lowerBound...])
 
-        if target == nil,
-           let stop = candidate.firstIndex(where: { "<>\"'`".contains($0) }) {
-            candidate = String(candidate[..<stop])
+        if target != nil {
+            // The closing parenthesis bounds a Markdown target, so all whitespace inside it is wrapping.
+            candidate = candidate.components(separatedBy: .whitespacesAndNewlines).joined()
+        } else {
+            if let stop = candidate.firstIndex(where: { "<>\"'`".contains($0) }) {
+                candidate = String(candidate[..<stop])
+            }
+            candidate = unwrap(candidate)
         }
 
-        candidate = candidate
-            .components(separatedBy: .whitespacesAndNewlines)
-            .joined()
-            .trimmingCharacters(in: CharacterSet(charactersIn: "])},.;:"))
+        candidate = candidate.trimmingCharacters(in: CharacterSet(charactersIn: "])},.;:"))
 
         guard let url = URL(string: candidate),
               let scheme = url.scheme?.lowercased(),
@@ -56,6 +58,26 @@ public enum LinkFixer {
 
     public static func canClean(_ input: String) -> Bool {
         (try? clean(input)) != nil
+    }
+
+    /// Rejoins a link that a terminal wrapped across lines, starting at its scheme.
+    /// A wrapped fragment is a single unbroken run of characters, so whitespace
+    /// within a line, a blank line, or a line of words marks the end of the link
+    /// and keeps prose that follows it from being glued on.
+    private static func unwrap(_ text: String) -> String {
+        var link = ""
+        for line in text.split(omittingEmptySubsequences: false, whereSeparator: \.isNewline) {
+            let fragment = line.trimmingCharacters(in: .whitespaces)
+            let isUnbroken = !fragment.contains(where: \.isWhitespace)
+            if link.isEmpty {
+                link = String(fragment.prefix { !$0.isWhitespace })
+                guard isUnbroken else { break }
+            } else {
+                guard !fragment.isEmpty, isUnbroken else { break }
+                link += fragment
+            }
+        }
+        return link
     }
 
     private static func markdownTarget(in input: String) -> String? {
