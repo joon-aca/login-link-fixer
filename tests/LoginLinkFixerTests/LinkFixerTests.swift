@@ -24,6 +24,33 @@ final class LinkFixerTests: XCTestCase {
         XCTAssertEqual(try LinkFixer.clean(markdown).absoluteString, url)
     }
 
+    func testStopsAtWordsAfterLinkOnSameLine() throws {
+        XCTAssertEqual(
+            try LinkFixer.clean("Open https://example.com/?a=1&b=2 then press Enter.").absoluteString,
+            "https://example.com/?a=1&b=2"
+        )
+    }
+
+    func testStopsAtProseLineAfterWrappedLink() throws {
+        let output = """
+        Visit this URL to sign in:
+        https://claude.com/cai/oauth/authorize?code=true&client_id=abc&scope=user%3Apr
+        ofile+user%3Ainference&state=xyz
+        Waiting for authentication...
+        """
+        XCTAssertEqual(try LinkFixer.clean(output).absoluteString, url)
+    }
+
+    func testStopsAtBlankLineAfterWrappedLink() throws {
+        let output = "https://claude.com/cai/oauth/authorize?code=true&client_id=abc&sc\nope=user%3Aprofile+user%3Ainference&state=xyz\n\nDone"
+        XCTAssertEqual(try LinkFixer.clean(output).absoluteString, url)
+    }
+
+    func testJoinsCRLFWrappedLines() throws {
+        let broken = "https://claude.com/cai/oauth/authorize?code=true&client_id=abc&sc  \r\nope=user%3Aprofile+user%3Ainference&state=xyz\r\n"
+        XCTAssertEqual(try LinkFixer.clean(broken).absoluteString, url)
+    }
+
     func testDecodesEscapedAmpersands() throws {
         XCTAssertEqual(
             try LinkFixer.clean("https://example.com/?a=1&amp;b=2").absoluteString,
