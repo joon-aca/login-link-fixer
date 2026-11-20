@@ -54,7 +54,7 @@ final class AboutWindowController: NSWindowController {
         descriptionLabel.alignment = .center
         descriptionLabel.maximumNumberOfLines = 3
 
-        let shortcutLabel = label("Quick Fix  ⌥⌘L", size: 13, weight: .medium, color: .labelColor)
+        let shortcutLabel = label("Press ⌥⌘L to fix a copied link", size: 13, weight: .medium, color: .labelColor)
         shortcutLabel.alignment = .center
         shortcutLabel.wantsLayer = true
         shortcutLabel.layer?.cornerRadius = 8
@@ -103,7 +103,7 @@ final class AboutWindowController: NSWindowController {
             iconView.widthAnchor.constraint(equalToConstant: 112),
             iconView.heightAnchor.constraint(equalToConstant: 112),
             descriptionLabel.widthAnchor.constraint(equalToConstant: 340),
-            shortcutLabel.widthAnchor.constraint(equalToConstant: 150),
+            shortcutLabel.widthAnchor.constraint(equalToConstant: 220),
             shortcutLabel.heightAnchor.constraint(equalToConstant: 34),
             privacyLabel.widthAnchor.constraint(equalToConstant: 340),
             repositoryButton.widthAnchor.constraint(equalToConstant: 190),

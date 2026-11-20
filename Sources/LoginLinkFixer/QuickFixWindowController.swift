@@ -34,23 +34,17 @@ final class QuickFixWindowController: NSWindowController, NSTextFieldDelegate {
     @available(*, unavailable)
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
-    func present(text: String? = nil, error: String? = nil) {
-        if let text {
-            inputField.stringValue = text
-        } else if let clipboard = NSPasteboard.general.string(forType: .string),
-                  LinkFixer.canClean(clipboard) {
-            inputField.stringValue = clipboard
-        } else {
-            inputField.stringValue = ""
-        }
-
+    func present(text: String = "", error: String? = nil) {
+        inputField.stringValue = text
         showError(error)
         positionNearTopOfScreen()
         showWindow(nil)
         NSApp.activate(ignoringOtherApps: true)
         window?.makeKeyAndOrderFront(nil)
         window?.makeFirstResponder(inputField)
-        inputField.currentEditor()?.selectedRange = NSRange(location: inputField.stringValue.count, length: 0)
+        if let editor = inputField.currentEditor() {
+            editor.selectedRange = NSRange(location: editor.string.utf16.count, length: 0)
+        }
     }
 
     func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {

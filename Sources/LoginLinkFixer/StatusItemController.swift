@@ -3,6 +3,7 @@ import AppKit
 @MainActor
 final class StatusItemController: NSObject {
     private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+    private let quickFix: () -> Void
     private let showFixer: () -> Void
     private let fixClipboard: () -> Void
     private let launchAtLoginState: () -> LaunchAtLoginState
@@ -11,6 +12,7 @@ final class StatusItemController: NSObject {
     private let quit: () -> Void
 
     init(
+        quickFix: @escaping () -> Void,
         showFixer: @escaping () -> Void,
         fixClipboard: @escaping () -> Void,
         launchAtLoginState: @escaping () -> LaunchAtLoginState,
@@ -18,6 +20,7 @@ final class StatusItemController: NSObject {
         showAbout: @escaping () -> Void,
         quit: @escaping () -> Void
     ) {
+        self.quickFix = quickFix
         self.showFixer = showFixer
         self.fixClipboard = fixClipboard
         self.launchAtLoginState = launchAtLoginState
@@ -64,7 +67,7 @@ final class StatusItemController: NSObject {
             statusItem.button?.performClick(nil)
             statusItem.menu = nil
         } else {
-            showFixer()
+            quickFix()
         }
     }
 
