@@ -2,14 +2,14 @@ import XCTest
 @testable import LoginLinkFixerCore
 
 final class LinkFixerTests: XCTestCase {
-    private let url = "https://claude.com/cai/oauth/authorize?code=true&client_id=abc&scope=user%3Aprofile+user%3Ainference&state=xyz"
+    private let url = "https://auth.example.com/oauth/authorize?code=true&client_id=abc&scope=user%3Aprofile+user%3Ainference&state=xyz"
 
     func testCleanURLPassesThrough() throws {
         XCTAssertEqual(try LinkFixer.clean(url).absoluteString, url)
     }
 
     func testRemovesLineBreaksAndSpaces() throws {
-        let broken = "https://claude.com/cai/oauth/authorize?code=true&client_id=abc\n&scope=user%3Aprofile+\n user%3Ainference&state=xyz"
+        let broken = "https://auth.example.com/oauth/authorize?code=true&client_id=abc\n&scope=user%3Aprofile+\n user%3Ainference&state=xyz"
         XCTAssertEqual(try LinkFixer.clean(broken).absoluteString, url)
     }
 
@@ -34,7 +34,7 @@ final class LinkFixerTests: XCTestCase {
     func testStopsAtProseLineAfterWrappedLink() throws {
         let output = """
         Visit this URL to sign in:
-        https://claude.com/cai/oauth/authorize?code=true&client_id=abc&scope=user%3Apr
+        https://auth.example.com/oauth/authorize?code=true&client_id=abc&scope=user%3Apr
         ofile+user%3Ainference&state=xyz
         Waiting for authentication...
         """
@@ -42,12 +42,12 @@ final class LinkFixerTests: XCTestCase {
     }
 
     func testStopsAtBlankLineAfterWrappedLink() throws {
-        let output = "https://claude.com/cai/oauth/authorize?code=true&client_id=abc&sc\nope=user%3Aprofile+user%3Ainference&state=xyz\n\nDone"
+        let output = "https://auth.example.com/oauth/authorize?code=true&client_id=abc&sc\nope=user%3Aprofile+user%3Ainference&state=xyz\n\nDone"
         XCTAssertEqual(try LinkFixer.clean(output).absoluteString, url)
     }
 
     func testJoinsCRLFWrappedLines() throws {
-        let broken = "https://claude.com/cai/oauth/authorize?code=true&client_id=abc&sc  \r\nope=user%3Aprofile+user%3Ainference&state=xyz\r\n"
+        let broken = "https://auth.example.com/oauth/authorize?code=true&client_id=abc&sc  \r\nope=user%3Aprofile+user%3Ainference&state=xyz\r\n"
         XCTAssertEqual(try LinkFixer.clean(broken).absoluteString, url)
     }
 
